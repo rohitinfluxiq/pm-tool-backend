@@ -5,17 +5,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import {MaterialModule} from './Module/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {LoginModule} from 'login-lib-influxiq';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+// import { MatDialogRef, MatDialog } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ForgetPasswordComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
