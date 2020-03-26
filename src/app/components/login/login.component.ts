@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   };
   public forgetRouteingUrl: any = {
     "path": "",
-    "buttonName": "Forget Password",
+    "buttonName": "Forget Password? ",
     "customLink": "/forget-password",
   };
 
