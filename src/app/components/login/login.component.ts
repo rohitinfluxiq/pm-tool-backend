@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSliderModule } from '@angular/material/slider';
+import {CookieService} from 'ngx-cookie-service'
 import {environment} from '../../../environments/environment';
 
 @Component({
@@ -27,7 +27,16 @@ export class LoginComponent implements OnInit {
   };
 
   public routerStatus: any;
-  constructor() { }
+  constructor(public cookies: CookieService) {
+    this.routerStatus = {           // this is use for if login succcess then navigate which page
+      "data": [
+        {
+          "type": "admin",
+          "routerNav": "admin/dashboard"
+        }
+      ]
+    }
+   }
 
   ngOnInit(): void {
   }

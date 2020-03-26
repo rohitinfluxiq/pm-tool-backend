@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import {A11yModule} from '@angular/cdk/a11y';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {PortalModule} from '@angular/cdk/portal';
@@ -40,19 +40,15 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
-import { CommonModule } from '@angular/common';
-
 
 @NgModule({
   exports: [
-    CommonModule,
     A11yModule,
-    DragDropModule,
-    PortalModule,
-    MatAutocompleteModule,
-    CdkTableModule,
     CdkStepperModule,
-    ScrollingModule,
+    CdkTableModule,
+    CdkTreeModule,
+    DragDropModule,
+    MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
     MatButtonModule,
@@ -83,11 +79,12 @@ import { CommonModule } from '@angular/common';
     MatSnackBarModule,
     MatSortModule,
     MatTableModule,
-    MatTableModule,
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    PortalModule,
+    ScrollingModule,
   ]
 })
 export class MaterialModule { }
