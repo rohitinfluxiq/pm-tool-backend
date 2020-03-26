@@ -11,9 +11,7 @@ import { UploadOutput, UploadInput, UploadFile, UploaderOptions } from 'ngx-uplo
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
-  {
-    path : 'login', component : LoginComponent
-  },
+  {path : 'login', component : LoginComponent},
   { 
     path: 'admin/user-management/add', 
     component: UserAddEditComponent
