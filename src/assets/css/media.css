@@ -1,0 +1,40 @@
+@media only screen and (max-width: 1560px) {
+    .loginbody .logowrapper {
+        top: -103px;
+        width: 280px;
+    }
+    .loginbody .from{    width: 420px !important;}
+  }
+  
+  @media only screen and (max-width: 1220px) {
+    .loginbody .from{
+        margin-left: 10% !important;
+    }
+
+  }
+  @media only screen and (max-width: 1024px) {
+    .loginbody .from {
+        margin-left: 0 !important;
+        width: 87% !important;
+        margin: 0 auto !important;
+        margin-top: 110px !important;
+    }
+    .loginbody{
+        background-size: 257%;
+        padding-top: 147%;
+        background-color: #e0f5f5;
+        padding-bottom: 3% !important;
+    }
+    .loginbody .main-div{    height: inherit !important;}
+  }
+  @media only screen and (max-width: 480px) {
+    .loginbody .logowrapper {
+        top: -89px;
+        width: 229px;
+    }
+    .loginbody .from h2{    font-size: 30px;}
+    .loginbody .from {
+        width: 82% !important;
+        padding: 6%;
+    }
+  }

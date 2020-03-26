@@ -1,0 +1,68 @@
+.loginbody{
+background-image: url(../../assets/images/loginbg.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-position: right top;
+position: relative;
+
+}
+.loginbody .from{
+    background-image: url(../../assets/images/loginform.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #fff0!important;
+    box-shadow: none !important;
+    margin: 0!important;
+    margin-left: 22% !important;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3) !important;
+    padding: 37px;
+    width: 27% !important;
+}
+.loginbody .main-div{
+    justify-content: flex-start !important;
+}
+.loginbody .logowrapper {
+    position: absolute;
+    top: -144px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 390px;
+}
+.loginbody .logowrapper img{max-width: 100%;}
+.loginbody .from h2{
+    font-size: 36px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(80,80,80,1) 50%, rgba(80,80,80,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;    padding: 0 !important;
+}
+.loginbody .mat-raised-button.mat-primary{
+    color: #fff;
+    background-color: #ff7d00;
+    font-size: 25px;
+    text-transform: uppercase;
+    height: 50px;
+    margin-top: 10px;
+}
+.loginbody .mat-form-field{
+    margin: 5px 0;
+}
+.loginbody .mat-form-field input{
+    background-color: #fff;
+    height: 40px;
+    border: 1px solid #b0a6a6;
+    width: 98%;
+    padding: 0 1%;
+
+}
+.mat-form-field-appearance-legacy .mat-form-field-wrapper{padding-bottom: 0 !important;}
+.mat-form-field-appearance-legacy .mat-form-field-underline{display: none;}
+.loginbody .mat-form-field-infix{border-top: 0;}
+.mat-form-field-label-wrapper{
+    top: 2px !important;
+    left: 10px !important;
+}
+.mat-form-field-label.ng-star-inserted.mat-empty.mat-form-field-empty{display: block !important;    transition: none !important;
+    transform: inherit !important;}
+.mat-form-field-label.ng-star-inserted{display: none !important;}
