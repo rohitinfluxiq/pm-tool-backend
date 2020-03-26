@@ -1,0 +1,17 @@
+<lib-listing class="formfilterdiv"
+            *ngIf="testimonialListConfig.datasource !=null && testimonialListConfig.datasource.length > 0"
+            [datasource]="testimonialListConfig.datasource"
+            [skip]="testimonialListConfig.listArray_skip"
+            [modify_header_array]="testimonialListConfig.listArray_modify_header"
+            [sourcedata]="testimonialListConfig.tableName"
+            [statusarr]="testimonialListConfig.statusarr"
+            [jwttoken]="testimonialListConfig.jwtToken"
+            [apiurl]="testimonialListConfig.apiUrl"
+            [editroute]="testimonialListConfig.editUrl"
+            [deleteendpoint]="testimonialListConfig.deleteEndPoint"
+            [date_search_source]="testimonialListConfig.view"
+           [date_search_endpoint]="testimonialListConfig.listEndPoint"
+           [search_settings]="testimonialListConfig.search_settings"
+           [detail_datatype]="testimonialListConfig.pendingmodelapplicationarray_detail_datatype"
+           [detail_skip_array]="testimonialListConfig.detail_header">
+        </lib-listing>
