@@ -5,7 +5,8 @@ import {UserManagementComponent} from './components/admin/user-management/user-m
 import { UserAddEditComponent } from './components/admin/user-management/user-add-edit/user-add-edit.component';
 import { UserListingComponent } from './components/admin/user-management/user-listing/user-listing.component';
 import { AdminDashboardComponent } from './components/admin/admin-dashboard/admin-dashboard.component';
-import {ResolveService} from './components/service/resolve.service'
+import {ResolveService} from './components/service/resolve.service';
+import { UploadOutput, UploadInput, UploadFile, UploaderOptions } from 'ngx-uploader';
 
 
 const routes: Routes = [
