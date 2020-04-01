@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CookieService} from 'ngx-cookie-service'
 import {environment} from '../../../environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -27,7 +28,8 @@ export class LoginComponent implements OnInit {
   };
 
   public routerStatus: any;
-  constructor(public cookies: CookieService) {
+  
+  constructor(public cookies: CookieService,public router: Router) {
     this.routerStatus = {           // this is use for if login succcess then navigate which page
       "data": [
         {

@@ -13,6 +13,9 @@ import { UserManagementComponent } from './components/admin/user-management/user
 import { UserAddEditComponent } from './components/admin/user-management/user-add-edit/user-add-edit.component';
 import { UserListingComponent } from './components/admin/user-management/user-listing/user-listing.component';
 import { ListingModule } from 'listing-angular7';
+import { RoleAddEditComponent } from './components/admin/role-management/role-add-edit/role-add-edit.component';
+import { RoleListingComponent } from './components/admin/role-management/role-listing/role-listing.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 // import { MatDialogRef, MatDialog } from '@angular/material';
 
 @NgModule({
@@ -24,7 +27,9 @@ import { ListingModule } from 'listing-angular7';
     AdminDashboardComponent,
     UserManagementComponent,
     UserAddEditComponent,
-    UserListingComponent
+    UserListingComponent,
+    RoleAddEditComponent,
+    RoleListingComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,9 @@ import { ListingModule } from 'listing-angular7';
     MaterialModule,
     BrowserAnimationsModule,
     LoginModule,
-    ListingModule
+    ListingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

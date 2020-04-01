@@ -1,8 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ViewChild,Input,Inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { HttpService } from '../../../service/http.service';
-
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import {MatTableDataSource} from '@angular/material/table';
+import { HttpClient } from '@angular/common/http';
+import { MAT_DIALOG_DATA, MatDialogRef, MatDialog } from "@angular/material";
+export interface PeriodicElement {
+  firstname: string;
+  lastname: string;
+  email: string;
+  type: string;
+  status: string;
+  deleteRecord:any;
+}
 @Component({
   selector: 'app-user-listing',
   templateUrl: './user-listing.component.html',
@@ -10,52 +22,14 @@ import { HttpService } from '../../../service/http.service';
 })
 export class UserListingComponent implements OnInit {
 
+  displayedColumns: string[] = ['firstname', 'lastname', 'email', 'type','status','deleteRecord'];
+  @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: false}) sort: MatSort;
+
   public UserAllData: any = [];
-  public allUserData_skip: any = [
-    "_id",
-    "user_type",
-    "password",
-    "created_at",
-    "access_code",
-    "address",
-    "city",
-    "state",
-    "updated_at",
-    "zip"
-  ];
-  public editUrl: any = "admin/user-management/edit";
-  public allUserData_modify_header: any = {
-    "firstname": "First Name",
-    "lastname": "Last Name",
-    "email": "Email",
-    "phone": "Phone Number",
-    "status": "Status",
-  };
-
-  public UpdateEndpoint: any = "addorupdatedata";
-  public deleteEndpoint: any = "deletesingledata";
-  public previewModal_skip: any = [
-    "_id",
-    "user_type",
-    "password",
-    "created_at",
-    "access_code",
-    "updated_at",
-  ];
-  public tableName: any = "data_users";
   public apiUrl: any;
-  public status: any = [{ val: 1, 'name': 'Active' }, { val: 0, 'name': 'Inactive' }];
-  public SearchingEndpoint: any = "datalist";
-  public SearchingSourceName: any = "";
-  public search_settings: any =
-    {
-      selectsearch: [{ label: 'Search By Status', field: 'status', values: this.status }],
-      textsearch: [{ label: "Search By Name", field: 'name_search' },
-      { label: "Search By E-Mail", field: 'email' }],
-
-    };
   public user_cookie: any;
-
+  public dataSource : any;
 
   constructor(public activatedRoute: ActivatedRoute, public cookie: CookieService,
     public httpService: HttpService) {
@@ -66,6 +40,7 @@ export class UserListingComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.data.forEach((data) => {
       this.UserAllData = data.userManagementData.res;
+      this.dataSource = new MatTableDataSource(this.UserAllData);
     })
   }
 }
